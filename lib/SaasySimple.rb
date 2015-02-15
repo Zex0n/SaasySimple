@@ -16,7 +16,7 @@ module SaasySimple
     if user.status == 'active'
       url = "https://api.fastspring.com/company/" +
             SaasySimple.config.store_id +
-            "/subscription/" + user.token +
+            "/subscription/" + user.send(SaasySimple.config.token_field.to_sym) +
             "?user="         + SaasySimple.config.username +
             "&pass="         + SaasySimple.config.password
       uri              = URI.parse(url)
@@ -40,7 +40,7 @@ module SaasySimple
     if user.status == 'active'
       url = "https://api.fastspring.com/company/" +
             SaasySimple.config.store_id +
-            "/subscription/" + user.token +
+            "/subscription/" + user.send(SaasySimple.config.token_field.to_sym) +
             "?user="         + SaasySimple.config.username +
             "&pass="         + SaasySimple.config.password
       uri              = URI.parse(url)

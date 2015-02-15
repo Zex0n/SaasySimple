@@ -7,6 +7,7 @@ module SaasySimple
       @username       = 'jack'
       @password       = 'jill'
       @model          = User
+      @token_field    = 'token'
     end
   end
 end
